@@ -1,0 +1,30 @@
+erDiagram
+    PRODUCT ||--o{ PICK : referenced_by
+    ORDER ||--o{ PICK : referenced_by
+
+    PRODUCT {
+        INT product_key PK
+        VARCHAR product_id
+        VARCHAR product_description
+        VARCHAR product_group
+        VARCHAR warehouse_section
+    }
+
+    ORDER {
+        INT order_key PK
+        VARCHAR order_id
+        VARCHAR origin
+        VARCHAR position_in_order
+    }
+
+    PICK {
+        VARCHAR pick_id
+        INT product_key FK
+        INT order_key FK
+        INT pick_volume
+        VARCHAR quantity_unit
+        INT year
+        INT month
+        INT quarter
+        DECIMAL order_duration
+    }

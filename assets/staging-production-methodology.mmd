@@ -1,0 +1,24 @@
+flowchart LR
+    A[Raw CSV Files
+Source data] --> B[Stream 1
+Raw to Staging]
+    B --> C[(obeta_staging.pick_data)]
+    B --> D[(obeta_staging.product_data)]
+    B --> E[(obeta_staging.warehouse_sections)]
+
+    C --> F[Stream 2
+Clean and Transform in Staging]
+    D --> F
+    E --> F
+
+    F --> G[(obeta_staging.pickoperations)]
+
+    G --> H[Stream 3
+Staging to Production]
+    H --> I[(obeta_production.product)]
+    H --> J[(obeta_production.order)]
+    H --> K[(obeta_production.pick)]
+
+    I --> L[Dashboard / Analytics / Reporting]
+    J --> L
+    K --> L
