@@ -24,6 +24,7 @@ This repository is designed so that users can open this first `README.md` and na
 | Methodology | [08. Staging / Production Methodology](docs/08-staging-production-methodology.md) | Learn how staging/prod was used, why it works, and pros/cons |
 | Methodology diagram | [09. Staging / Production Diagram](docs/09-staging-production-diagram.md) | View Mermaid diagrams for the ETL architecture |
 | ER diagram | [10. Production ER Diagram](docs/10-production-er-diagram.md) | View the Mermaid ER diagram for the final production model |
+| Q&A questions | [11. Q&A Questions and Answers](docs/11-qa-questions.md) | Review all case study Q&A questions and answers |
 | SQL queries | [Dashboard KPI Queries](sql/dashboard-kpi-queries.sql) | See the SQL used for dashboard KPIs |
 | Database DDL | [Database Schema SQL](sql/database-schema.sql) | See the SQL schema definitions |
 
@@ -112,7 +113,8 @@ obeta-dashboard-documentation/
 │   ├── 07-database-schema-reference.md
 │   ├── 08-staging-production-methodology.md
 │   ├── 09-staging-production-diagram.md
-│   └── 10-production-er-diagram.md
+│   ├── 10-production-er-diagram.md
+│   └── 11-qa-questions.md
 ├── sql/
 │   ├── dashboard-kpi-queries.sql
 │   └── database-schema.sql
@@ -134,6 +136,7 @@ obeta-dashboard-documentation/
 6. [Staging / Production Diagram](docs/09-staging-production-diagram.md)
 7. [Production ER Diagram](docs/10-production-er-diagram.md)
 8. [Presentation Script](docs/05-presentation-script.md)
+9. [Q&A Questions and Answers](docs/11-qa-questions.md)
 
 ---
 
