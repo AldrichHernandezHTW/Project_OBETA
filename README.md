@@ -144,17 +144,3 @@ The dashboard uses the OBETA production star schema. The `pick` table is the fac
 The selected KPIs summarize total activity, handled volume, order processing efficiency, product variety, and order demand. The charts then break these KPIs down by time, product group, order origin, and warehouse section.
 
 The staging/production approach makes the process easier to debug, more reproducible, and better prepared for analytics.
-
----
-
-## Quick Start
-
-To use this repository locally:
-
-```bash
-git clone <repository-url>
-cd obeta-dashboard-documentation
-open README.md
-```
-
-Or simply open `README.md` directly in GitHub.
