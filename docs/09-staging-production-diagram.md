@@ -119,6 +119,4 @@ This is why the methodology is robust, explainable, and closer to real-world BI 
 
 ## Navigation
 
-⬅️ Previous: [08. Staging / Production Methodology](08-staging-production-methodology.md)  
-🏠 [Repository Home](../README.md)  
-➡️ Next: [10. Production ER Diagram](10-production-er-diagram.md)
+[Previous: Staging / Production Methodology](08-staging-production-methodology.md) | [Repository Home](../README.md) | [Next: Production ER Diagram](10-production-er-diagram.md)

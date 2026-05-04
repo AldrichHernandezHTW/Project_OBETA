@@ -25,6 +25,7 @@ This repository is designed so that users can open this first `README.md` and na
 | Methodology diagram | [09. Staging / Production Diagram](docs/09-staging-production-diagram.md) | View Mermaid diagrams for the ETL architecture |
 | ER diagram | [10. Production ER Diagram](docs/10-production-er-diagram.md) | View the Mermaid ER diagram for the final production model |
 | Q&A questions | [11. Q&A Questions and Answers](docs/11-qa-questions.md) | Review all case study Q&A questions and answers |
+| Python ETL workflow | [12. Python ETL Workflow](docs/12-python-etl-workflow.md) | Understand the Python code flow by flow, including batching decisions |
 | SQL queries | [Dashboard KPI Queries](sql/dashboard-kpi-queries.sql) | See the SQL used for dashboard KPIs |
 | Database DDL | [Database Schema SQL](sql/database-schema.sql) | See the SQL schema definitions |
 
@@ -114,7 +115,8 @@ obeta-dashboard-documentation/
 │   ├── 08-staging-production-methodology.md
 │   ├── 09-staging-production-diagram.md
 │   ├── 10-production-er-diagram.md
-│   └── 11-qa-questions.md
+│   ├── 11-qa-questions.md
+│   └── 12-python-etl-workflow.md
 ├── sql/
 │   ├── dashboard-kpi-queries.sql
 │   └── database-schema.sql
@@ -137,6 +139,7 @@ obeta-dashboard-documentation/
 7. [Production ER Diagram](docs/10-production-er-diagram.md)
 8. [Presentation Script](docs/05-presentation-script.md)
 9. [Q&A Questions and Answers](docs/11-qa-questions.md)
+10. [Python ETL Workflow](docs/12-python-etl-workflow.md)
 
 ---
 

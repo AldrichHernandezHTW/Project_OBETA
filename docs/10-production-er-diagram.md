@@ -79,6 +79,4 @@ Star schema = more structured, cleaner, and better for dashboards.
 
 ## Navigation
 
-⬅️ Previous: [09. Staging / Production Methodology Diagram](09-staging-production-diagram.md)  
-🏠 [Repository Home](../README.md)  
-Next: [11. Q&A Questions and Answers](11-qa-questions.md)
+[Previous: Staging / Production Methodology Diagram](09-staging-production-diagram.md) | [Repository Home](../README.md) | [Next: Q&A Questions and Answers](11-qa-questions.md)

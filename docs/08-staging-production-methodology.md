@@ -201,6 +201,4 @@ A Mermaid version of this methodology is available here:
 
 ## Navigation
 
-⬅️ Previous: [07. Database Schema Reference](07-database-schema-reference.md)  
-🏠 [Repository Home](../README.md)  
-➡️ Next: [09. Staging / Production Methodology Diagram](09-staging-production-diagram.md)
+[Previous: Database Schema Reference](07-database-schema-reference.md) | [Repository Home](../README.md) | [Next: Staging / Production Methodology Diagram](09-staging-production-diagram.md)

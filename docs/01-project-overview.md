@@ -66,4 +66,4 @@ The dashboard therefore measures how much picking activity happened, how much vo
 
 ## Navigation
 
-[Back to README](../README.md) | [Repository Home](../README.md) | [Next: Data Model](02-data-model.md)
+[Repository Home](../README.md) | [Next: Data Model](02-data-model.md)

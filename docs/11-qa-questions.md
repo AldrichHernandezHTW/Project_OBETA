@@ -1,5 +1,9 @@
 # 11. Q&A Questions and Answers
 
+## Brief Summary
+
+This page collects the complete OBETA case study Q&A. It covers the main database theory concepts, the ETL and staging/production modeling decisions, and the Tableau Prep data flow used to transform raw CSV files into the final production star schema for dashboard analysis.
+
 ## Q&A: Database Theory
 
 ### 1. What is a database?
@@ -187,4 +191,4 @@ This is needed because the raw cleaned staging table is still one wide operation
 
 ## Navigation
 
-[Previous: Production ER Diagram](10-production-er-diagram.md) | [Repository Home](../README.md)
+[Previous: Production ER Diagram](10-production-er-diagram.md) | [Repository Home](../README.md) | [Next: Python ETL Workflow](12-python-etl-workflow.md)
