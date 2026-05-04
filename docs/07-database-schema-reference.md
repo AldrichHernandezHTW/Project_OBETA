@@ -172,6 +172,13 @@ Why this matters:
 - `product_id` keeps the connection to the original data.
 - The dimension is denormalized because product description, group, and warehouse section are stored together for easier dashboard analysis.
 
+Important indexes:
+
+| Index | Columns | Why it was useful |
+|---|---|---|
+| `PRIMARY KEY` | `product_key` | Uniquely identifies each product dimension row and supports joins from `pick` |
+| `idx_product_product_id` | `product_id` | Speeds up matching products from `pickoperations` when creating or joining the production model |
+
 ---
 
 ### `order`
@@ -203,6 +210,13 @@ Because `order` is a reserved SQL keyword, it must be written with backticks in 
 ```sql
 obeta_production.`order`
 ```
+
+Important indexes:
+
+| Index | Columns | Why it was useful |
+|---|---|---|
+| `PRIMARY KEY` | `order_key` | Uniquely identifies each order dimension row and supports joins from `pick` |
+| `idx_order_order_id` | `order_id` | Speeds up matching orders from `pickoperations` when creating or joining the production model |
 
 ---
 
@@ -244,7 +258,29 @@ Important indexes:
 
 ---
 
-## 3. Why Indexes Were Added
+## 3. Index Summary for All Tables
+
+| Database | Table | Index | Columns | Purpose |
+|---|---|---|---|---|
+| `obeta_staging` | `pick_data` | `idx_pick_data_order_date` | `order_id`, `date` | Speeds up minimum and maximum timestamp calculations per order |
+| `obeta_staging` | `pick_data` | `idx_pick_data_product` | `product_id` | Speeds up joins with `product_data` |
+| `obeta_staging` | `pick_data` | `idx_pick_data_warehouse` | `warehouse_section` | Speeds up joins with `warehouse_sections` |
+| `obeta_staging` | `pickoperations` | `idx_pickoperations_product` | `product_id` | Speeds up creation of the `product` dimension and joins back to picks |
+| `obeta_staging` | `pickoperations` | `idx_pickoperations_order` | `order_id` | Speeds up creation of the `order` dimension and joins back to picks |
+| `obeta_staging` | `product_data` | `idx_product_data_product` | `product_id` | Speeds up joins between picking data and product master data |
+| `obeta_staging` | `warehouse_sections` | `idx_warehouse_abbreviation` | `warehouse_abbreviation` | Speeds up joins between picking data and warehouse reference data |
+| `obeta_production` | `product` | `PRIMARY KEY` | `product_key` | Uniquely identifies product dimension rows |
+| `obeta_production` | `product` | `idx_product_product_id` | `product_id` | Speeds up product lookup by original source/business key |
+| `obeta_production` | `order` | `PRIMARY KEY` | `order_key` | Uniquely identifies order dimension rows |
+| `obeta_production` | `order` | `idx_order_order_id` | `order_id` | Speeds up order lookup by original source/business key |
+| `obeta_production` | `pick` | `idx_pick_product_key` | `product_key` | Speeds up joins from `pick` to `product` |
+| `obeta_production` | `pick` | `idx_pick_order_key` | `order_key` | Speeds up joins from `pick` to `order` |
+| `obeta_production` | `pick` | `idx_pick_year_month` | `year`, `month` | Speeds up time-based dashboard charts |
+| `obeta_production` | `pick` | `idx_pick_quarter` | `quarter` | Speeds up quarter-based filtering and aggregation |
+
+---
+
+## 4. Why Indexes Were Added
 
 Indexes were added because the dataset is large and joins/grouping operations were expensive.
 
@@ -268,7 +304,7 @@ For this project, the trade-off makes sense because the production database is m
 
 ---
 
-## 4. Full SQL Schema
+## 5. Full SQL Schema
 
 The complete schema is also available as a SQL file:
 
@@ -380,6 +416,4 @@ CREATE TABLE `product` (
 
 ## Navigation
 
-⬅️ Previous: [06. Remarks, Suggestions and Improvements](06-remarks-suggestions-improvements.md)  
-🏠 [Repository Home](../README.md)  
-➡️ Next: [08. Staging / Production Methodology](08-staging-production-methodology.md)
+[Previous: Remarks, Suggestions and Improvements](06-remarks-suggestions-improvements.md) | [Repository Home](../README.md) | [Next: Staging / Production Methodology](08-staging-production-methodology.md)
